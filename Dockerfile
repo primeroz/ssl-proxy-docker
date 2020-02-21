@@ -21,4 +21,5 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       maintainer="Francesco Ciocchetti <primeroznl@gmail.com>"
 
 COPY --from=builder /tmp/ssl-proxy-linux-amd64 /ssl-proxy
+WORKDIR /tmp
 ENTRYPOINT ["/ssl-proxy"]
